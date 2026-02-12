@@ -1,0 +1,15 @@
+#A. Police Recruits
+#https://codeforces.com/contest/427/problem/A
+n=int(input())
+people=list(map(int,input().split()))
+officers=0
+criminals=0
+for i in range(n):
+    if people[i]>=0:
+        officers+=people[i]
+    else:
+        criminals+=abs(people[i])
+        if officers>0:
+            officers-=1
+            criminals-=1
+print(criminals)
