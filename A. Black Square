@@ -1,0 +1,9 @@
+#A. Black Square
+#https://codeforces.com/contest/431/problem/A
+first=list(map(int,input().split()))
+second=input()
+
+total=0
+for i in second:
+    total+=first[int(i)-1]
+print(total)
