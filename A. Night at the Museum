@@ -1,0 +1,20 @@
+#A. Night at the Museum
+#https://codeforces.com/contest/731/problem/A
+word=input()
+letters="abcdefghijklmnopqrstuvwxyz"
+word.lower()
+
+count=0
+pointer="a"
+for i in range(len(word)):
+    if pointer !=word[i]:
+        length=abs( letters.index(pointer)-letters.index(word[i]))
+        if length<=13:
+            count+=length
+            pointer=word[i]
+        else:
+            length=26-length
+            count+=length
+            pointer=word[i]
+
+print (count)
