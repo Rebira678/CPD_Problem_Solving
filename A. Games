@@ -1,0 +1,14 @@
+#A. Games
+#https://codeforces.com/contest/268/problem/A
+n=int(input())
+count=0
+checker=[]
+mov=[]
+for _ in range(n):
+    c,m=map(int,input().split())
+    checker.append(c)
+    mov.append(m)
+
+for i in mov:
+    count+=checker.count(i) 
+print(count)
